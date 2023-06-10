@@ -20,7 +20,7 @@ func main() {
 	zone6, err := os.Open("go/data/A6.json")
 	zone7, err := os.Open("go/data/A7.json")
 	regions, err := os.Open("go/data/polygons.json")
-
+	// need to specify in which order the files are read into the map
 	kvs := map[string]os.File{zone1.Name(): *zone1, zone2.Name(): *zone2, zone3.Name(): *zone3, zone4.Name(): *zone4, zone5.Name(): *zone5, zone6.Name(): *zone6, zone7.Name(): *zone7, regions.Name(): *regions}
 
 	for _, file := range kvs {
@@ -29,7 +29,7 @@ func main() {
 
 		bytevalue, _ := os.ReadFile(file.Name())
 		fc, _ := geojson.UnmarshalFeatureCollection(bytevalue)
-		// fmt.Printf("Zone: %s ", fc.Features)
+		// need to have first input boundaries of polygon json file and second input search/filter/mouse/userInput from user to search where a specific point lies
 		fmt.Print(scanner.IsPointInsidePolygon(fc, fc.Features[0].Point()))
 	}
 	if err != nil {
