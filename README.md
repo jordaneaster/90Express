@@ -11,23 +11,23 @@ a Go module serves up backend GeoJson files to be consumed on the front-end by a
 ### Structure
 
 - Root
-    go.mod - 90Scanner go module
-    go.work - go workspace folder
-    go.sum - dependency tree
-    main.go - executable file and main function to run application
+    - go.mod - 90Scanner go module
+    - go.work - go workspace folder
+    - go.sum - dependency tree
+    - main.go - executable file and main function to run application
 
 - scanner
-    go.mod - scanner package
-    go.sum - dependency tree
-    scanner.go - IsPointInsidePolygon function (consumed by root/main.go)
+    - go.mod - scanner package
+    - go.sum - dependency tree
+    - scanner.go - IsPointInsidePolygon function (consumed by root/main.go)
 
 - structs
-    structs.go - defines structs used in application
+    - structs.go - defines structs used in application
 
 - data
-    jsonfiles - stores json documents
+    - jsonfiles - stores json documents
 
 
 ### Run Application
-from root directory:
-go run main.go
+- from root directory:
+- go run main.go
