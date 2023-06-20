@@ -10,7 +10,7 @@ import (
 
 var z []byte
 
-func main() {
+func loadZones() {
 	// need to make these directories global environment variables -> then secrets in ansible
 	zone1, err := os.Open("go/data/A1.json")
 	zone2, err := os.Open("go/data/A2.json")
@@ -37,5 +37,4 @@ func main() {
 	if err != nil {
 		fmt.Print(err)
 	}
-
 }
