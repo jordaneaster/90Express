@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-color: black; /* Set background color to black */
+            color: white; /* Set text color to white */
+            font-family: Arial, sans-serif; /* Set font family */
+            text-align: center; /* Center-align text */
+        }
+
+        h1, p {
+            margin-top: 20px; /* Add some space above the text */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-auto-rows: minmax(150px, auto); /* auto-sized rows */
+            gap: 20px; /* gap between grid items */
+            padding: 20px; /* padding for the grid container */
+        }
+
+        .grid-item {
+            background-color: #333; /* Set tile background color to off grey */
+            border-radius: 10px; /* Add rounded corners */
+            padding: 20px; /* Add padding */
+            display: flex; /* Use flexbox for content alignment */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for sleek look */
+        }
+
+        /* Styling for the profile button */
+        #profile-button {
+            background-color: #333; /* Same color as other tiles */
+            border: none; /* Remove border */
+            color: white; /* Text color */
+            font-size: 18px; /* Font size */
+            padding: 20px; /* Padding */
+            border-radius: 10px; /* Rounded corners */
+            cursor: pointer; /* Cursor style */
+            outline: none; /* Remove outline */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        #profile-button:hover {
+            background-color: #555; /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>90 Express Station</h1>
+    <div class="grid-container">
+        <!-- Profile Tile (Tile 1) with a button -->
+        <div class="grid-item" id="profile-tile">
+            <button id="profile-button">Profile</button>
+        </div>
+        <!-- Other tiles (Tile 2 - Tile 6) -->
+        <div class="grid-item">Tile 2</div>
+        <div class="grid-item">Tile 3</div>
+        <div class="grid-item">Tile 4</div>
+        <div class="grid-item">Tile 5</div>
+        <div class="grid-item">Tile 6</div>
+    </div>
+</body>
+</html>
