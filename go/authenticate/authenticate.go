@@ -140,6 +140,7 @@ func GenerateToken(username string) (string, error) {
 type AuthenticationResponse struct {
 	Authenticated bool   `json:"authenticated"`
 	Token         string `json:"token,omitempty"`
+	Username      string `json:"username,omitempty"` // Add Username field
 }
 
 // AuthenticateUserDB authenticates the user and returns a token upon successful authentication

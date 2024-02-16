@@ -66,5 +66,23 @@
         <div class="grid-item">Tile 5</div>
         <div class="grid-item">Tile 6</div>
     </div>
+
+    <!-- JavaScript code -->
+    <script>
+        // Wait for the DOM content to be fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the profile button element
+            var profileButton = document.querySelector("#profile-button");
+
+            // Check if the profile button element exists
+            if (profileButton) {
+                // Add a click event listener to the profile button
+                profileButton.addEventListener("click", function() {
+                    // Redirect to the profile page with the username loaded
+                    window.location.href = "http://localhost:8080/profile?username=" + username;
+                });
+            }
+        });
+    </script>
 </body>
 </html>
